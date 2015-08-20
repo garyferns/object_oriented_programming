@@ -21,6 +21,11 @@ end
 
 class Student < Person
 
+  def initialize(name, grade)
+    super(name) # sends the initializer to the parent class.
+    @grade = grade
+  end
+
 def learn
 
   puts "I get it!"
@@ -42,7 +47,7 @@ end
 chris = Instructor.new("Chris")
 chris.greeting
 
-cristina = Student.new("Cristina")
+cristina = Student.new("Cristina", 7)
 cristina.greeting
 
 chris.teach
